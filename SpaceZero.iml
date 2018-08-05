@@ -20,6 +20,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.19" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.8" level="project" />
     <orderEntry type="library" name="Maven: org.liquidengine:legui:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.reflections:reflections:0.9.11" level="project" />

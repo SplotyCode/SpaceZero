@@ -40,6 +40,11 @@
             <systemPath>${pom.basedir}/libs/imgui-all.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.8</version>

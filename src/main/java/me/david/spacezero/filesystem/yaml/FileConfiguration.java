@@ -21,9 +21,11 @@ public abstract class FileConfiguration extends MemoryConfiguration {
 
     public abstract String saveToString();
 
-    public void load(File file) throws FileNotFoundException, IOException, InvalidConfigurationException {
-        final FileInputStream stream = new FileInputStream(file);
+    public void load(File file) throws IOException, InvalidConfigurationException {
+        load(new FileInputStream(file));
+    }
 
+    public void load(InputStream stream) throws IOException, InvalidConfigurationException {
         load(new InputStreamReader(stream, Charset.forName("Utf-8")));
     }
 
