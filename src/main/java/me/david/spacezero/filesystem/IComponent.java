@@ -1,8 +1,8 @@
 package me.david.spacezero.filesystem;
 
-public interface ZeroComponent {
+public interface IComponent {
 
-    ZeroFolder getParent();
+    IFolder getParent();
     String getName();
 
 }

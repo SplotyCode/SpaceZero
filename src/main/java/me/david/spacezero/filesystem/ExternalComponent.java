@@ -7,18 +7,18 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NormalComponent implements ZeroComponent {
+public class ExternalComponent implements IComponent {
 
     @Getter protected File file;
 
-    public NormalComponent(final File file) {
+    public ExternalComponent(final File file) {
         this.file = file;
         if (!file.exists()) throw new IllegalArgumentException("Folder must exists");
     }
 
-    public List<NormalFolder> getParents(File baseDir) {
-        List<NormalFolder> parents = new ArrayList<>();
-        NormalFolder currentParent = getParent();
+    public List<ExternalFolder> getParents(File baseDir) {
+        List<ExternalFolder> parents = new ArrayList<>();
+        ExternalFolder currentParent = getParent();
         while (currentParent.getParent().file != baseDir) {
             parents.add(currentParent.getParent());
             currentParent = currentParent.getParent();
@@ -33,8 +33,8 @@ public class NormalComponent implements ZeroComponent {
     }
 
     @Override
-    public NormalFolder getParent() {
-        return new NormalFolder(file.getParentFile());
+    public ExternalFolder getParent() {
+        return new ExternalFolder(file.getParentFile());
     }
 
     @Override

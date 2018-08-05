@@ -1,12 +1,10 @@
 package me.david.spacezero.filesystem;
 
-import lombok.Getter;
-
 import java.io.*;
 
-public class NormalFile extends NormalComponent implements ZeroFile {
+public class ExternalFile extends ExternalComponent implements IFile {
 
-    public NormalFile(File file) {
+    public ExternalFile(File file) {
         super(file);
     }
 
