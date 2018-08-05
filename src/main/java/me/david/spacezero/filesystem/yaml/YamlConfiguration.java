@@ -7,6 +7,7 @@ import org.yaml.snakeyaml.representer.Representer;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Map;
 
 public class YamlConfiguration extends FileConfiguration {
@@ -61,6 +62,18 @@ public class YamlConfiguration extends FileConfiguration {
 
         try {
             config.load(file);
+        } catch (IOException | InvalidConfigurationException ex) {
+            ex.printStackTrace();
+        }
+
+        return config;
+    }
+
+    public static YamlConfiguration loadConfiguration(InputStream stream) {
+        YamlConfiguration config = new YamlConfiguration();
+
+        try {
+            config.load(stream);
         } catch (IOException | InvalidConfigurationException ex) {
             ex.printStackTrace();
         }
