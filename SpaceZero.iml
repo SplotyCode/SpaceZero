@@ -21,7 +21,34 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.8" level="project" />
-    <orderEntry type="library" name="Maven: org.liquidengine:legui:1.4.5" level="project" />
+    <orderEntry type="library" name="Maven: org.liquidengine:legui:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.reflections:reflections:0.9.11" level="project" />
+    <orderEntry type="library" name="Maven: org.javassist:javassist:3.21.0-GA" level="project" />
+    <orderEntry type="library" name="Maven: org.joml:joml:1.9.9" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.7" level="project" />
+    <orderEntry type="library" name="Maven: org.liquidengine:cbchain:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.liquidengine:leutil:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-windows:3.1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-linux:3.1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-macos:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-windows:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-linux:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-macos:3.1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-windows:3.1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-linux:3.1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-macos:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-windows:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-linux:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-macos:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-windows:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-linux:3.1.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-macos:3.1.6" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: org.lwjgl:lwjgl-nanovg-natives-linux:3.1.6">
         <CLASSES>
@@ -502,7 +529,7 @@
     <orderEntry type="module-library">
       <library name="Maven: org.lwjgl:lwjgl-nanovg:3.1.6">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/lwjgl-nanovg.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/lwjgl/lwjgl-nanovg/3.1.6/lwjgl-nanovg-3.1.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -520,7 +547,7 @@
     <orderEntry type="module-library">
       <library name="Maven: org.lwjgl:lwjgl-opengl:3.1.6">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/lwjgl-opengl.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/lwjgl/lwjgl-opengl/3.1.6/lwjgl-opengl-3.1.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -835,7 +862,7 @@
     <orderEntry type="module-library">
       <library name="Maven: org.lwjgl:lwjgl-stb:3.1.6">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/lwjgl-stb.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/lwjgl/lwjgl-stb/3.1.6/lwjgl-stb-3.1.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

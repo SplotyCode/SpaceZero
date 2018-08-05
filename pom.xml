@@ -24,6 +24,13 @@
         <lwjgl.version>3.1.6</lwjgl.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>LiquidEngine</id>
+            <url>https://raw.githubusercontent.com/LiquidEngine/repo/releases</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>imgui</groupId>
