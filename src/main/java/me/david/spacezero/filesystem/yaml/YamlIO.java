@@ -10,12 +10,12 @@ import java.util.zip.ZipOutputStream;
 
 public class YamlIO {
 
-    public static YamlComponent load(InputStream stream, YamlComponent component) {
+    public static <T extends YamlComponent> T load(InputStream stream, T component) {
         component.read(YamlConfiguration.loadConfiguration(stream));
         return component;
     }
 
-    public static YamlComponent load(String name, ZipFile file, YamlComponent component) {
+    public static <T extends YamlComponent> T load(String name, ZipFile file, T component) {
         try {
             return load(file.getInputStream(new ZipEntry(name)), component);
         } catch (IOException ex) {
@@ -24,15 +24,15 @@ public class YamlIO {
         return null;
     }
 
-    public static YamlComponent load(String file, Project project, YamlComponent component) {
+    public static <T extends YamlComponent> T load(String file, Project project, T component) {
         return load(file, project.getZipFile(), component);
     }
 
-    public static YamlComponent load(ZipFile file, ProjectComponent component) {
+    public static <T extends ProjectComponent> T load(ZipFile file, T component) {
         return load(component.getFileName(), file, component);
     }
 
-    public static YamlComponent load(Project project, ProjectComponent component) {
+    public static <T extends ProjectComponent> T load(Project project, T component) {
         return load(component.getFileName(), project, component);
     }
 

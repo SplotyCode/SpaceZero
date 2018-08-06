@@ -2,6 +2,7 @@ package me.david.spacezero.filesystem.format;
 
 import me.david.spacezero.filesystem.*;
 import me.david.spacezero.filesystem.yaml.YamlConfiguration;
+import me.david.spacezero.filesystem.yaml.YamlIO;
 import org.apache.commons.io.IOUtils;
 
 import java.io.*;
@@ -16,9 +17,9 @@ public final class ProjectIO {
     public static Project load(final File file) throws IOException {
         ZipFile zipFile = new ZipFile(file);
 
-        ProjectData projectData = loadProjectData(zipFile.getInputStream(zipFile.getEntry("project.yml")));
-        ProjectStatistics projectStatistics = loadProjectStatistics(zipFile.getInputStream(zipFile.getEntry("statistics.yml")));
-        ProjectValues projectValues = loadProjectValues(zipFile.getInputStream(zipFile.getEntry("values.yml")));
+        ProjectData projectData = YamlIO.load(zipFile, new ProjectData());
+        ProjectStatistics projectStatistics = YamlIO.load(zipFile, new ProjectStatistics());
+        ProjectValues projectValues = YamlIO.load(zipFile, new ProjectValues());
 
         ZeroFolder baseFolder = loadFileSystem(zipFile);
 
@@ -37,7 +38,7 @@ public final class ProjectIO {
         return new ZeroFile(entry, name, parent, file);
     }
 
-    public static ZeroFolder loadFileSystem(ZipFile file) throws IOException {
+    static ZeroFolder loadFileSystem(ZipFile file) throws IOException {
         ZeroFolder folder = new ZeroFolder(null, null, null);
 
         while (file.entries().hasMoreElements()){
