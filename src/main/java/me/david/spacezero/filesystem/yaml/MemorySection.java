@@ -238,7 +238,7 @@ public class MemorySection implements ConfigurationSection {
 
     public long getLong(String path, long def) {
         Object val = get(path, def);
-        return (val instanceof Number) ? (long) val : def;
+        return (val instanceof Number) ? Long.parseLong(String.valueOf(val)) : def;
     }
 
     public boolean isLong(String path) {

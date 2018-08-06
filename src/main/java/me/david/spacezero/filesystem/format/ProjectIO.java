@@ -87,28 +87,47 @@ public final class ProjectIO {
         return new ProjectValues(yaml.getLong("linkedfiles"), yaml.getLong("linkedfolders"));
     }
 
-    public static Project create(File file, String name) {
-        ProjectData projectData = new ProjectData(System.currentTimeMillis(), System.getProperty("user.name"), name);
-        ProjectStatistics projectStatistics = new ProjectStatistics();
+    public static void createLock(File file) {
+        editLock(file, (byte) 1);
+    }
 
+    private static void editLock(final File file, byte bool) {
         try {
             ZipOutputStream zs = new ZipOutputStream(new FileOutputStream(file));
             zs.putNextEntry(new ZipEntry("lock.lock"));
-
-            zs.putNextEntry(new ZipEntry("project.yml"));
-            YamlConfiguration project = YamlConfiguration.loadConfiguration(new ByteArrayInputStream(new byte[0]));
-            project.set("name", projectData.getName());
-            project.set("user", projectData.getUser());
-            project.set("time", projectData.getCreationTime());
-            zs.write(project.saveToString().getBytes("UTF-8"));
-
-            zs.putNextEntry(new ZipEntry("statistics.yml"));
-            YamlConfiguration statstics = YamlConfiguration.loadConfiguration(new ByteArrayInputStream(new byte[0]));
-            statstics.set("ontime", projectStatistics.getOnTime());
-            statstics.set("opens", projectStatistics.getOpens());
-            zs.write(statstics.saveToString().getBytes("UTF-8"));
-
+            zs.write(new byte[] {bool});
             zs.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteLock(Project project) {
+        editLock(project.getFile(), (byte) 0);
+    }
+
+    public static Project create(File file, String name) {
+        ProjectData projectData = new ProjectData(System.currentTimeMillis(), System.getProperty("user.name"), name);
+        ProjectStatistics projectStatistics = new ProjectStatistics();
+        ProjectValues projectValues = new ProjectValues();
+
+        try {
+            createLock(file);
+
+            ZipOutputStream stream = new ZipOutputStream(new FileOutputStream(file));
+
+            stream.putNextEntry(new ZipEntry(projectData.getFileName()));
+            YamlIO.write(stream, projectData);
+            stream.closeEntry();
+            stream.putNextEntry(new ZipEntry(projectStatistics.getFileName()));
+            YamlIO.write(stream, projectStatistics);
+            stream.closeEntry();
+            stream.putNextEntry(new ZipEntry(projectValues.getFileName()));
+            YamlIO.write(stream, projectValues);
+            stream.closeEntry();
+
+            stream.close();
+
             return load(file);
         } catch (IOException e) {
             e.printStackTrace();

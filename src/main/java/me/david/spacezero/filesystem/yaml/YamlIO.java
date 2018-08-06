@@ -1,6 +1,7 @@
 package me.david.spacezero.filesystem.yaml;
 
 import me.david.spacezero.filesystem.format.Project;
+import org.apache.commons.io.IOUtils;
 
 import java.io.*;
 import java.nio.charset.Charset;
@@ -51,6 +52,7 @@ public class YamlIO {
             ZipOutputStream stream = new ZipOutputStream(new FileOutputStream(zipFile));
             stream.putNextEntry(new ZipEntry(name));
             write(stream, component);
+            stream.closeEntry();
             stream.close();
         } catch (IOException ex) {
             ex.printStackTrace();
