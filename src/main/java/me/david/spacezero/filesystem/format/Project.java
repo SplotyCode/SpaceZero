@@ -9,4 +9,9 @@ public class Project {
     @Getter private ProjectData data;
     @Getter private ProjectStatistics statistics;
 
+    public Project(ZeroFolder base, ProjectData data, ProjectStatistics statistics) {
+        this.base = base;
+        this.data = data;
+        this.statistics = statistics;
+    }
 }

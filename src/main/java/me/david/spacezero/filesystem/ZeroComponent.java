@@ -3,12 +3,10 @@ package me.david.spacezero.filesystem;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.util.zip.ZipEntry;
-
 @AllArgsConstructor
 public class ZeroComponent implements IComponent {
 
-    @Getter protected ZipEntry entry;
+    @Getter private String name;
     private IFolder parent;
 
     @Override
@@ -16,8 +14,4 @@ public class ZeroComponent implements IComponent {
         return parent;
     }
 
-    @Override
-    public String getName() {
-        return entry.getName();
-    }
 }

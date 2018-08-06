@@ -8,9 +8,11 @@ import java.util.zip.ZipFile;
 public class ZeroFile extends ZeroComponent implements IFile {
 
     private ZipFile zipFile;
+    private ZipEntry entry;
 
-    public ZeroFile(ZipEntry entry, IFolder parent, ZipFile zipFile) {
-        super(entry, parent);
+    public ZeroFile(ZipEntry entry, String name, IFolder parent, ZipFile zipFile) {
+        super(name, parent);
+        this.entry = entry;
         this.zipFile = zipFile;
     }
 

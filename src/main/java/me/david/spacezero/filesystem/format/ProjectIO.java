@@ -1,18 +1,80 @@
 package me.david.spacezero.filesystem.format;
 
+import me.david.spacezero.filesystem.*;
 import me.david.spacezero.filesystem.yaml.YamlConfiguration;
+import org.apache.commons.io.IOUtils;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.util.HashSet;
 import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 public final class ProjectIO {
 
-    public static Project load(final File file) {
-        return new Project();
+    public static Project load(final File file) throws IOException {
+        ZipFile jarFile = new ZipFile(file);
+
+        ProjectData projectData = loadProjectData(jarFile.getInputStream(jarFile.getEntry("project.yml")));
+        ProjectStatistics projectStatistics = loadProjectStatistics(jarFile.getInputStream(jarFile.getEntry("statistics.yml")));
+        ZeroFolder baseFolder = loadFileSystem(jarFile);
+
+        return new Project(baseFolder, projectData, projectStatistics);
+    }
+
+    private static IComponent loadFile(ZipEntry entry, String name, IFolder parent, ZipFile file) throws IOException {
+        if (entry.getName().endsWith(".ld")) {
+            return new ExternalFolder(new File(IOUtils.toString(file.getInputStream(entry), Charset.forName("UTF-8"))));
+        }
+        if (entry.getName().endsWith(".lf")) {
+            return new ExternalFile(new File(IOUtils.toString(file.getInputStream(entry), Charset.forName("UTF-8"))));
+        }
+        return new ZeroFile(entry, name, parent, file);
+    }
+
+    private static ZeroFolder loadFileSystem(ZipFile file) throws IOException {
+        ZeroFolder folder = new ZeroFolder(null, null, null);
+
+        while (file.entries().hasMoreElements()){
+            ZipEntry entry = file.entries().nextElement();
+            if (entry.isDirectory() || !entry.getName().startsWith("files/")) continue;
+            String fileName = entry.getName().substring(6);
+
+            String name = fileName.substring(fileName.lastIndexOf("/")+1);
+            String[] path = fileName.lastIndexOf("/") != -1 ? fileName.substring(0, fileName.lastIndexOf("/")).split("/") : new String[0];
+
+            //System.out.println("name=" + name + " path=" + file.substring(0, file.lastIndexOf(separator)));
+
+            ZeroFolder dir = folder;
+            for (String pa : path) {
+                boolean found = false;
+                for (IComponent comp : dir.getItems()){
+                    if (comp instanceof ZeroFolder && comp.getName().equals(pa)) {
+                        dir = (ZeroFolder) comp;
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    ZeroFolder directory = new ZeroFolder(pa, dir, new HashSet<>());
+                    dir.addItem(directory);
+                    dir = directory;
+                }
+            }
+
+            dir.addItem(loadFile(entry, name, dir, file));
+        }
+        return folder;
+    }
+
+    private static ProjectData loadProjectData(InputStream stream) {
+        YamlConfiguration yaml = YamlConfiguration.loadConfiguration(stream);
+        return new ProjectData(yaml.getLong("time"), yaml.getString("user"), yaml.getString("name"));
+    }
+
+    private static ProjectStatistics loadProjectStatistics(InputStream stream) {
+        YamlConfiguration yaml = YamlConfiguration.loadConfiguration(stream);
+        return new ProjectStatistics(yaml.getInt("opens"), yaml.getLong("ontime"));
     }
 
     public static Project create(File file, String name) {
@@ -37,11 +99,11 @@ public final class ProjectIO {
             zs.write(statstics.saveToString().getBytes("UTF-8"));
 
             zs.close();
+            return load(file);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return new Project();
+        return null;
     }
 
 }
