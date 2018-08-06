@@ -51,6 +51,7 @@ public class YamlIO {
             ZipOutputStream stream = new ZipOutputStream(new FileOutputStream(zipFile));
             stream.putNextEntry(new ZipEntry(name));
             write(stream, component);
+            stream.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
