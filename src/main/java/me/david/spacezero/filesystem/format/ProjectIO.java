@@ -14,13 +14,13 @@ import java.util.zip.ZipOutputStream;
 public final class ProjectIO {
 
     public static Project load(final File file) throws IOException {
-        ZipFile jarFile = new ZipFile(file);
+        ZipFile zipFile = new ZipFile(file);
 
-        ProjectData projectData = loadProjectData(jarFile.getInputStream(jarFile.getEntry("project.yml")));
-        ProjectStatistics projectStatistics = loadProjectStatistics(jarFile.getInputStream(jarFile.getEntry("statistics.yml")));
-        ZeroFolder baseFolder = loadFileSystem(jarFile);
+        ProjectData projectData = loadProjectData(zipFile.getInputStream(zipFile.getEntry("project.yml")));
+        ProjectStatistics projectStatistics = loadProjectStatistics(zipFile.getInputStream(zipFile.getEntry("statistics.yml")));
+        ZeroFolder baseFolder = loadFileSystem(zipFile);
 
-        return new Project(baseFolder, projectData, projectStatistics);
+        return new Project(baseFolder, projectData, projectStatistics, zipFile);
     }
 
     private static IComponent loadFile(ZipEntry entry, String name, IFolder parent, ZipFile file) throws IOException {
