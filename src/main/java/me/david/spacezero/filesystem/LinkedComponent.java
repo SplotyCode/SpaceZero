@@ -7,18 +7,18 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExternalComponent implements IComponent {
+public class LinkedComponent implements IComponent {
 
     @Getter protected File file;
 
-    public ExternalComponent(final File file) {
+    public LinkedComponent(final File file) {
         this.file = file;
         if (!file.exists()) throw new IllegalArgumentException("Folder must exists");
     }
 
-    public List<ExternalFolder> getParents(File baseDir) {
-        List<ExternalFolder> parents = new ArrayList<>();
-        ExternalFolder currentParent = getParent();
+    public List<LinkedFolder> getParents(File baseDir) {
+        List<LinkedFolder> parents = new ArrayList<>();
+        LinkedFolder currentParent = getParent();
         while (currentParent.getParent().file != baseDir) {
             parents.add(currentParent.getParent());
             currentParent = currentParent.getParent();
@@ -33,8 +33,8 @@ public class ExternalComponent implements IComponent {
     }
 
     @Override
-    public ExternalFolder getParent() {
-        return new ExternalFolder(file.getParentFile());
+    public LinkedFolder getParent() {
+        return new LinkedFolder(file.getParentFile());
     }
 
     @Override

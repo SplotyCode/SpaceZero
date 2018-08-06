@@ -25,10 +25,10 @@ public final class ProjectIO {
 
     private static IComponent loadFile(ZipEntry entry, String name, IFolder parent, ZipFile file) throws IOException {
         if (entry.getName().endsWith(".ld")) {
-            return new ExternalFolder(new File(IOUtils.toString(file.getInputStream(entry), Charset.forName("UTF-8"))));
+            return new LinkedFolder(new File(IOUtils.toString(file.getInputStream(entry), Charset.forName("UTF-8"))));
         }
         if (entry.getName().endsWith(".lf")) {
-            return new ExternalFile(new File(IOUtils.toString(file.getInputStream(entry), Charset.forName("UTF-8"))));
+            return new LinkedFile(new File(IOUtils.toString(file.getInputStream(entry), Charset.forName("UTF-8"))));
         }
         return new ZeroFile(entry, name, parent, file);
     }

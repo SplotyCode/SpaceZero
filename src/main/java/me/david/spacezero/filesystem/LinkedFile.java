@@ -2,9 +2,9 @@ package me.david.spacezero.filesystem;
 
 import java.io.*;
 
-public class ExternalFile extends ExternalComponent implements IFile {
+public class LinkedFile extends LinkedComponent implements IFile {
 
-    public ExternalFile(File file) {
+    public LinkedFile(File file) {
         super(file);
     }
 

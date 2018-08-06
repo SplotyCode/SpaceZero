@@ -1,5 +1,5 @@
 [check] loadFileSystem in ProjectIO
 [check] Implement External File System in loadFileSystem
-Rename External File System to Linked File System
+[check] Rename External File System to Linked File System
 Cache Items for linked File System
 Add refresh function in Project
