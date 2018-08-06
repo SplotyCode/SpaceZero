@@ -9,7 +9,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
-public class YamlIO {
+public final class YamlIO {
 
     public static <T extends YamlComponent> T load(InputStream stream, T component) {
         component.read(YamlConfiguration.loadConfiguration(stream));
