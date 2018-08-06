@@ -2,4 +2,4 @@
 [check] Implement External File System in loadFileSystem
 [check] Rename External File System to Linked File System
 [check] Cache Items for linked File System
-Add refresh function in Project
+[check] Add refresh function in Project

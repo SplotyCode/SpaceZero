@@ -33,7 +33,7 @@ public final class ProjectIO {
         return new ZeroFile(entry, name, parent, file);
     }
 
-    private static ZeroFolder loadFileSystem(ZipFile file) throws IOException {
+    public static ZeroFolder loadFileSystem(ZipFile file) throws IOException {
         ZeroFolder folder = new ZeroFolder(null, null, null);
 
         while (file.entries().hasMoreElements()){
