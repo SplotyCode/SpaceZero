@@ -11,12 +11,15 @@ public class Project {
     @Getter private ZeroFolder base;
     @Getter private ProjectData data;
     @Getter private ProjectStatistics statistics;
+    @Getter private ProjectValues values;
     @Getter private ZipFile zipFile;
 
-    public Project(ZeroFolder base, ProjectData data, ProjectStatistics statistics, ZipFile zipFile) {
+    public Project(ZeroFolder base, ProjectData data, ProjectStatistics statistics,
+                   ProjectValues values, ZipFile zipFile) {
         this.base = base;
         this.data = data;
         this.statistics = statistics;
+        this.values = values;
         this.zipFile = zipFile;
     }
 

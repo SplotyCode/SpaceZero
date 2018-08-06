@@ -18,9 +18,11 @@ public final class ProjectIO {
 
         ProjectData projectData = loadProjectData(zipFile.getInputStream(zipFile.getEntry("project.yml")));
         ProjectStatistics projectStatistics = loadProjectStatistics(zipFile.getInputStream(zipFile.getEntry("statistics.yml")));
+        ProjectValues projectValues = loadProjectValues(zipFile.getInputStream(zipFile.getEntry("values.yml")));
+
         ZeroFolder baseFolder = loadFileSystem(zipFile);
 
-        return new Project(baseFolder, projectData, projectStatistics, zipFile);
+        return new Project(baseFolder, projectData, projectStatistics, projectValues, zipFile);
     }
 
     private static IComponent loadFile(ZipEntry entry, String name, IFolder parent, ZipFile file) throws IOException {
@@ -75,6 +77,11 @@ public final class ProjectIO {
     private static ProjectStatistics loadProjectStatistics(InputStream stream) {
         YamlConfiguration yaml = YamlConfiguration.loadConfiguration(stream);
         return new ProjectStatistics(yaml.getInt("opens"), yaml.getLong("ontime"));
+    }
+
+    private static ProjectValues loadProjectValues(InputStream stream) {
+        YamlConfiguration yaml = YamlConfiguration.loadConfiguration(stream);
+        return new ProjectValues(yaml.getLong("linkedfiles"), yaml.getLong("linkedfolders"));
     }
 
     public static Project create(File file, String name) {
