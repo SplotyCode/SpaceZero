@@ -22,7 +22,9 @@ public final class ProjectIO {
 
         ZeroFolder baseFolder = loadFileSystem(zipFile);
 
-        return new Project(baseFolder, projectData, projectStatistics, projectValues, zipFile);
+        zipFile.close();
+
+        return new Project(baseFolder, projectData, projectStatistics, projectValues, file);
     }
 
     private static IComponent loadFile(ZipEntry entry, String name, IFolder parent, ZipFile file) throws IOException {
