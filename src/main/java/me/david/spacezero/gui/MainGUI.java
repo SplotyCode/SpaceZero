@@ -4,9 +4,11 @@ import org.joml.Vector2i;
 import org.liquidengine.legui.DefaultInitializer;
 import org.liquidengine.legui.animation.Animator;
 import org.liquidengine.legui.component.Frame;
+import org.liquidengine.legui.component.Panel;
 import org.liquidengine.legui.system.context.Context;
 import org.liquidengine.legui.system.layout.LayoutManager;
 import org.liquidengine.legui.system.renderer.Renderer;
+import org.liquidengine.legui.theme.Themes;
 import org.lwjgl.glfw.GLFWKeyCallbackI;
 import org.lwjgl.glfw.GLFWWindowCloseCallbackI;
 import org.lwjgl.opengl.GL;
@@ -15,7 +17,7 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
-public class MainGUI {
+public class MainGUI extends Panel {
 
     public static final int WIDTH = 800;
     public static final int HEIGHT = 600;
@@ -23,9 +25,13 @@ public class MainGUI {
     private Context context;
     private Frame frame = new Frame(WIDTH, HEIGHT);
 
-    private FileExplorer fileExplorer = new FileExplorer(frame);
+    private FileExplorer fileExplorer = new FileExplorer(this);
 
     public MainGUI() {
+        super(0, 0, WIDTH, HEIGHT);
+        frame.getComponentLayer().add(this);
+        Themes.setDefaultTheme(Themes.FLAT_PETERRIVER_DARK);
+        Themes.getDefaultTheme().applyAll(frame);
         System.setProperty("joml.nounsafe", Boolean.TRUE.toString());
         System.setProperty("java.awt.headless", Boolean.TRUE.toString());
         if (!glfwInit()) {
@@ -60,6 +66,7 @@ public class MainGUI {
 
             glClearColor(1, 1, 1, 1);
             glViewport(0, 0, windowSize.x, windowSize.y);
+            setSize(windowSize.x, windowSize.y);
             glClear(GL_COLOR_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
             fileExplorer.render(windowSize.x, windowSize.y);
