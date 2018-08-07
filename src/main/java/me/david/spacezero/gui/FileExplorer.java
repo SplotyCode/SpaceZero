@@ -9,6 +9,7 @@ import org.liquidengine.legui.component.*;
 import org.liquidengine.legui.event.MouseClickEvent;
 import org.liquidengine.legui.image.BufferedImage;
 import org.liquidengine.legui.image.Image;
+import org.liquidengine.legui.style.color.ColorConstants;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -29,9 +30,12 @@ public class FileExplorer {
         pane.getContainer().setSize(300, 300);
         pane.getContainer().getListenerMap().addListener(MouseClickEvent.class, event -> {
             if (event.getAction() == MouseClickEvent.MouseClickAction.CLICK) {
-                int x = (int) ((event.getAbsolutePosition().x - pane.getHorizontalScrollBar().getCurValue() - 4) / ITEM_WEIGHT);
-                int y = (int) ((event.getAbsolutePosition().y - pane.getVerticalScrollBar().getCurValue() - 4) / (ITEM_HEIGHT + 4 + 20 + 4));
+                float scrollX = pane.getHorizontalScrollBar().getCurValue(),
+                    scrollY = pane.getVerticalScrollBar().getCurValue();
+                int x = (int) ((event.getAbsolutePosition().x - scrollX - 4) / ITEM_WEIGHT);
+                int y = (int) ((event.getAbsolutePosition().y - scrollY - 4) / (ITEM_HEIGHT + 4 + 20 + 4));
                 int i = ((x + 1) * (y + 1)) - 1;
+                System.out.println(i);
                 if (currentFolder.getItems().length - 1 >= i)
                     clickComponent(null);
                 else clickComponent(currentFolder.getItems()[0]);
@@ -41,11 +45,12 @@ public class FileExplorer {
     }
 
     private void clickComponent(IComponent component) {
+        System.out.println(component + "a" + selected);
         if (component == null) {
             selected = null;
             return;
         }
-        if (selected == null) {
+        if (selected == null || selected != component) {
             selected = component;
             return;
         }
@@ -67,15 +72,26 @@ public class FileExplorer {
             }
             pane.getContainer().setSize(w / 3, h / 3.5f);
         } else {
+            if (currentFolder.getItems().length == 0) {
+                //TODO center
+                pane.getContainer().add(new Label("The Folder is empty!", 4, 4, 1, 1));
+                pane.getContainer().setSize(w / 3, h / 3.5f);
+                return;
+            }
             int y = 4;
             int x = 4;
             for (IComponent component : currentFolder.getItems()) {
                 ImageView image = new ImageView(getImage(getImagePath(component)));
                 image.setPosition(x + (ITEM_WEIGHT / 2 - IMAGE_SIZE / 2), y);
                 image.setSize(IMAGE_SIZE, IMAGE_SIZE);
-                image.getListenerMap().addListener(MouseClickEvent.class, event -> clickComponent(component));
+                image.getListenerMap().addListener(MouseClickEvent.class, event -> {
+                    System.out.println(event.getAction().name());
+                    if (event.getAction() == MouseClickEvent.MouseClickAction.RELEASE)
+                        clickComponent(component);
+                });
 
                 Label text = new Label(component.getName());
+                if (selected == component) text.getTextState().setTextColor(ColorConstants.lightBlue());
                 text.setPosition(x, y + IMAGE_SIZE + 4);
 
                 pane.getContainer().add(image);

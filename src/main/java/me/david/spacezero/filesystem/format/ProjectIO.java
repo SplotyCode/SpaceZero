@@ -7,6 +7,7 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.*;
 import java.nio.charset.Charset;
+import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.zip.ZipEntry;
@@ -46,9 +47,15 @@ public final class ProjectIO {
             ZipEntry entry = entries.nextElement();
             if (!entry.getName().startsWith("files/") || (entry.isDirectory() && entry.getName().equals("files/"))) continue;
             String fileName = entry.getName().substring(6);
+            System.out.println(fileName);
 
             String name = fileName.substring(fileName.lastIndexOf("/")+1);
             String[] path = fileName.lastIndexOf("/") != -1 ? fileName.substring(0, fileName.lastIndexOf("/")).split("/") : new String[0];
+
+            if (entry.isDirectory() && path.length != 0) {
+                name = path[path.length - 1];
+                path = Arrays.copyOf(path, path.length-1);
+            }
 
             //System.out.println("name=" + name + " path=" + file.substring(0, file.lastIndexOf(separator)));
 
@@ -68,7 +75,7 @@ public final class ProjectIO {
                 }
             }
             if (entry.isDirectory()) {
-                dir.addItem(new ZeroFolder(entry.getName(), dir, new HashSet<>()));
+                dir.addItem(new ZeroFolder(name, dir, new HashSet<>()));
             } else {
                 dir.addItem(loadFile(entry, name, dir, file));
             }
