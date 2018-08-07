@@ -4,36 +4,56 @@ import me.david.spacezero.SpaceZero;
 import me.david.spacezero.filesystem.IComponent;
 import me.david.spacezero.filesystem.IFolder;
 import me.david.spacezero.filesystem.LinkedFolder;
+import org.apache.commons.io.FilenameUtils;
 import org.liquidengine.legui.component.*;
 import org.liquidengine.legui.event.MouseClickEvent;
 import org.liquidengine.legui.image.BufferedImage;
 import org.liquidengine.legui.image.Image;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class FileExplorer {
 
     private ScrollablePanel pane = new ScrollablePanel();
     private IFolder currentFolder;
+    private IComponent selected;
     private HashMap<String, Image> cashedImages = new HashMap<>();
 
-    private static float ITEM_WEIGHT = 60, ITEM_HEIGHT = 40, IMAGE_SIZE = 50;
+    private static final float ITEM_WEIGHT = 60, ITEM_HEIGHT = 40, IMAGE_SIZE = 50;
+    private static final Set<String> SUPPORTED_FILETYPES = new HashSet<>(Arrays.asList("xml", "tiff", "sql", "exe", "css", "rar", "_blank", "h", "hpp", "iso", "java", "tga", "rtf", "jpg", "aiff", "wav", "flv", "php", "eps", "key", "aac", "mp4", "psd", "dxf", "dmg", "odt", "ai", "js", "ods", "less", "gif", "qt", "bmp", "dwg", "ppt", "rb", "zip", "py", "doc", "tgz", "html", "pdf", "cpp", "odf", "dat", "scss", "mp3", "xls", "dotx", "csv", "ots", "otp", "ott", "sass", "avi", "c", "_page", "txt", "mpg", "yml", "mid", "png", "ics", "xlsx"));
 
     public FileExplorer(Panel frame) {
         pane.getContainer().setSize(300, 300);
         pane.getContainer().getListenerMap().addListener(MouseClickEvent.class, event -> {
             if (event.getAction() == MouseClickEvent.MouseClickAction.CLICK) {
-                int i = (int) ((event.getAbsolutePosition().y-5) / 20);
-                if (currentFolder != null && i >= currentFolder.getItems().length - 1) {
-                    IComponent component = currentFolder.getItems()[i];
-                    if (component instanceof IFolder) {
-                        currentFolder = (IFolder) component;
-                        cashedImages.clear();
-                    } else System.out.println("File - " + component.getName());
-                }
+                int x = (int) ((event.getAbsolutePosition().x - pane.getHorizontalScrollBar().getCurValue() - 4) / ITEM_WEIGHT);
+                int y = (int) ((event.getAbsolutePosition().y - pane.getVerticalScrollBar().getCurValue() - 4) / (ITEM_HEIGHT + 4 + 20 + 4));
+                int i = ((x + 1) * (y + 1)) - 1;
+                if (currentFolder.getItems().length - 1 >= i)
+                    clickComponent(null);
+                else clickComponent(currentFolder.getItems()[0]);
             }
         });
         frame.add(pane);
+    }
+
+    private void clickComponent(IComponent component) {
+        if (component == null) {
+            selected = null;
+            return;
+        }
+        if (selected == null) {
+            selected = component;
+            return;
+        }
+        if (selected instanceof IFolder) {
+            currentFolder = (IFolder) component;
+            return;
+        }
+        System.out.println("Opening: " + component.getName());
     }
 
     public void render(int w, int h) {
@@ -47,16 +67,20 @@ public class FileExplorer {
             }
             pane.getContainer().setSize(w / 3, h / 3.5f);
         } else {
-            int y = (int) (0.01f * h);
+            int y = 4;
             int x = 4;
             for (IComponent component : currentFolder.getItems()) {
                 ImageView image = new ImageView(getImage(getImagePath(component)));
                 image.setPosition(x + (ITEM_WEIGHT / 2 - IMAGE_SIZE / 2), y);
                 image.setSize(IMAGE_SIZE, IMAGE_SIZE);
+                image.getListenerMap().addListener(MouseClickEvent.class, event -> clickComponent(component));
+
                 Label text = new Label(component.getName());
                 text.setPosition(x, y + IMAGE_SIZE + 4);
+
                 pane.getContainer().add(image);
                 pane.getContainer().add(text);
+
                 x += ITEM_WEIGHT;
                 if (x + ITEM_WEIGHT + 4 >= w / 3) {
                     x = 4;
@@ -74,7 +98,7 @@ public class FileExplorer {
             }
             return "icons/explorer/folder.png";
         }
-        return "icons/files/_blank.png";
+        return "icons/files/" + (SUPPORTED_FILETYPES.contains(FilenameUtils.getExtension(component.getName())) ? FilenameUtils.getExtension(component.getName()) : "_blank") + ".png";
     }
 
     private Image getImage(String path) {
