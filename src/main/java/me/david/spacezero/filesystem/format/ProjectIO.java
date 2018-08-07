@@ -7,6 +7,7 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.*;
 import java.nio.charset.Charset;
+import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
@@ -24,7 +25,6 @@ public final class ProjectIO {
         ZeroFolder baseFolder = loadFileSystem(zipFile);
 
         zipFile.close();
-
         return new Project(baseFolder, projectData, projectStatistics, projectValues, file);
     }
 
@@ -39,11 +39,12 @@ public final class ProjectIO {
     }
 
     static ZeroFolder loadFileSystem(ZipFile file) throws IOException {
-        ZeroFolder folder = new ZeroFolder(null, null, null);
+        ZeroFolder folder = new ZeroFolder("Project", null, new HashSet<>());
 
-        while (file.entries().hasMoreElements()){
-            ZipEntry entry = file.entries().nextElement();
-            if (entry.isDirectory() || !entry.getName().startsWith("files/")) continue;
+        Enumeration<? extends ZipEntry> entries = file.entries();
+        while (entries.hasMoreElements()){
+            ZipEntry entry = entries.nextElement();
+            if (!entry.getName().startsWith("files/") || (entry.isDirectory() && entry.getName().equals("files/"))) continue;
             String fileName = entry.getName().substring(6);
 
             String name = fileName.substring(fileName.lastIndexOf("/")+1);
@@ -66,8 +67,11 @@ public final class ProjectIO {
                     dir = directory;
                 }
             }
-
-            dir.addItem(loadFile(entry, name, dir, file));
+            if (entry.isDirectory()) {
+                dir.addItem(new ZeroFolder(entry.getName(), dir, new HashSet<>()));
+            } else {
+                dir.addItem(loadFile(entry, name, dir, file));
+            }
         }
         return folder;
     }
@@ -125,7 +129,6 @@ public final class ProjectIO {
             stream.putNextEntry(new ZipEntry(projectValues.getFileName()));
             YamlIO.write(stream, projectValues);
             stream.closeEntry();
-
             stream.close();
 
             return load(file);

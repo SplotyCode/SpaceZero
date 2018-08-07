@@ -11,21 +11,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="Maven: imgui:imgui:1.63-beta-0">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/imgui-all.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.19" level="project" />
-    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.8" level="project" />
-    <orderEntry type="library" name="Maven: org.liquidengine:legui:1.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.joml:joml:1.9.10" level="project" />
+    <orderEntry type="library" name="Maven: org.liquidengine:legui:1.4.5-230" level="project" />
     <orderEntry type="library" name="Maven: org.reflections:reflections:0.9.11" level="project" />
     <orderEntry type="library" name="Maven: org.javassist:javassist:3.21.0-GA" level="project" />
-    <orderEntry type="library" name="Maven: org.joml:joml:1.9.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
@@ -34,24 +23,29 @@
     <orderEntry type="library" name="Maven: org.liquidengine:cbchain:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.liquidengine:leutil:1.0.0" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
-    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-windows:3.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-linux:3.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-macos:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-windows:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-linux:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-macos:3.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-windows:3.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-linux:3.1.6" level="project" />
-    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-macos:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-windows:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-linux:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-macos:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-windows:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-linux:3.1.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-macos:3.1.6" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-windows:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-linux:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-opengl:natives-macos:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-windows:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-linux:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-stb:natives-macos:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-windows:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-linux:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.lwjgl:lwjgl-glfw:natives-macos:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-windows:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-linux:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-nanovg:natives-macos:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-windows:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-linux:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl:natives-macos:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-yoga:natives-windows:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-yoga:natives-linux:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.lwjgl:lwjgl-yoga:natives-macos:3.2.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.19" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.8" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nanovg-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nanovg-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nanovg-natives-linux.jar!/" />
         </CLASSES>
@@ -60,7 +54,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-stb-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-stb-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-stb-natives-windows.jar!/" />
         </CLASSES>
@@ -69,7 +63,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyexr-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyexr-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyexr-natives-macos.jar!/" />
         </CLASSES>
@@ -78,7 +72,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-ovr:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-ovr:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-ovr.jar!/" />
         </CLASSES>
@@ -87,7 +81,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-assimp:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-assimp:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-assimp.jar!/" />
         </CLASSES>
@@ -96,7 +90,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-zstd-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-zstd-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-zstd-natives-windows.jar!/" />
         </CLASSES>
@@ -105,7 +99,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyfd-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyfd-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyfd-natives-macos.jar!/" />
         </CLASSES>
@@ -114,7 +108,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openal-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-openal-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openal-natives-linux.jar!/" />
         </CLASSES>
@@ -123,7 +117,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-bgfx-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-bgfx-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-bgfx-natives-macos.jar!/" />
         </CLASSES>
@@ -132,7 +126,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-par-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-vma-natives-linux:3.2.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-vma-natives-linux.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.lwjgl:lwjgl-par-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-par-natives-macos.jar!/" />
         </CLASSES>
@@ -141,7 +144,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyexr-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyexr-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyexr-natives-windows.jar!/" />
         </CLASSES>
@@ -150,7 +153,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-vulkan:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-vulkan:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-vulkan.jar!/" />
         </CLASSES>
@@ -159,7 +162,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-rpmalloc-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-rpmalloc-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-rpmalloc-natives-macos.jar!/" />
         </CLASSES>
@@ -168,7 +171,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-egl:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-egl:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-egl.jar!/" />
         </CLASSES>
@@ -177,7 +180,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-jemalloc-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-jemalloc-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-jemalloc-natives-macos.jar!/" />
         </CLASSES>
@@ -186,7 +189,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nanovg-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nanovg-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nanovg-natives-windows.jar!/" />
         </CLASSES>
@@ -195,7 +198,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-stb-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-stb-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-stb-natives-linux.jar!/" />
         </CLASSES>
@@ -204,7 +207,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-remotery-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-remotery-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-remotery-natives-macos.jar!/" />
         </CLASSES>
@@ -213,7 +216,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-assimp-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-assimp-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-assimp-natives-windows.jar!/" />
         </CLASSES>
@@ -222,7 +225,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengl-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengl-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opengl-natives-windows.jar!/" />
         </CLASSES>
@@ -231,7 +234,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-rpmalloc-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-rpmalloc-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-rpmalloc-natives-windows.jar!/" />
         </CLASSES>
@@ -240,7 +243,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-glfw-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-glfw-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-glfw-natives-linux.jar!/" />
         </CLASSES>
@@ -249,7 +252,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openvr-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-vma:3.2.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-vma.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.lwjgl:lwjgl-openvr-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openvr-natives-windows.jar!/" />
         </CLASSES>
@@ -258,7 +270,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-yoga-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-yoga-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-yoga-natives-windows.jar!/" />
         </CLASSES>
@@ -267,7 +279,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openal:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-openal:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openal.jar!/" />
         </CLASSES>
@@ -276,7 +288,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lmdb-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lmdb-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lmdb-natives-linux.jar!/" />
         </CLASSES>
@@ -285,7 +297,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lz4-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lz4-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lz4-natives-linux.jar!/" />
         </CLASSES>
@@ -294,7 +306,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tootle-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tootle-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tootle-natives-windows.jar!/" />
         </CLASSES>
@@ -303,7 +315,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-sse-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-sse-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-sse-natives-linux.jar!/" />
         </CLASSES>
@@ -312,7 +324,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tootle:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tootle:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tootle.jar!/" />
         </CLASSES>
@@ -321,7 +333,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nuklear-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nuklear-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nuklear-natives-linux.jar!/" />
         </CLASSES>
@@ -330,7 +342,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-remotery-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-remotery-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-remotery-natives-linux.jar!/" />
         </CLASSES>
@@ -339,7 +351,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opencl:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opencl:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opencl.jar!/" />
         </CLASSES>
@@ -348,7 +360,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-xxhash-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-xxhash-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-xxhash-natives-windows.jar!/" />
         </CLASSES>
@@ -357,7 +369,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openal-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-vma-natives-macos:3.2.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-vma-natives-macos.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.lwjgl:lwjgl-openal-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openal-natives-macos.jar!/" />
         </CLASSES>
@@ -366,7 +387,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-odbc:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-odbc:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-odbc.jar!/" />
         </CLASSES>
@@ -375,7 +396,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-yoga:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-yoga:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-yoga.jar!/" />
         </CLASSES>
@@ -384,7 +405,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-xxhash-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-xxhash-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-xxhash-natives-macos.jar!/" />
         </CLASSES>
@@ -393,7 +414,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengles:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengles:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opengles.jar!/" />
         </CLASSES>
@@ -402,7 +423,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tootle-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tootle-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tootle-natives-macos.jar!/" />
         </CLASSES>
@@ -411,7 +432,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl.jar!/" />
         </CLASSES>
@@ -420,7 +441,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openvr:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-openvr:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openvr.jar!/" />
         </CLASSES>
@@ -429,7 +450,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-sse:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-sse:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-sse.jar!/" />
         </CLASSES>
@@ -438,7 +459,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-zstd-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-zstd-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-zstd-natives-macos.jar!/" />
         </CLASSES>
@@ -447,7 +468,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nuklear-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nuklear-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nuklear-natives-windows.jar!/" />
         </CLASSES>
@@ -456,7 +477,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-glfw:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-glfw:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-glfw.jar!/" />
         </CLASSES>
@@ -465,7 +486,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-remotery-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-remotery-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-remotery-natives-windows.jar!/" />
         </CLASSES>
@@ -474,7 +495,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-jawt:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-jawt:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-jawt.jar!/" />
         </CLASSES>
@@ -483,7 +504,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nuklear-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nuklear-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nuklear-natives-macos.jar!/" />
         </CLASSES>
@@ -492,7 +513,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-zstd-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-zstd-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-zstd-natives-linux.jar!/" />
         </CLASSES>
@@ -501,7 +522,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyfd-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyfd-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyfd-natives-linux.jar!/" />
         </CLASSES>
@@ -510,7 +531,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-xxhash:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-xxhash:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-xxhash.jar!/" />
         </CLASSES>
@@ -519,7 +540,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-sse-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:joml-1.9.10:1.9.10">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/joml-1.9.10.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.lwjgl:lwjgl-sse-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-sse-natives-macos.jar!/" />
         </CLASSES>
@@ -528,16 +558,25 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nanovg:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nanovg:3.2.0">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/lwjgl/lwjgl-nanovg/3.1.6/lwjgl-nanovg-3.1.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-nanovg.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-jemalloc:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-vulkan-natives-macos:3.2.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-vulkan-natives-macos.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.lwjgl:lwjgl-jemalloc:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-jemalloc.jar!/" />
         </CLASSES>
@@ -546,16 +585,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengl:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengl:3.2.0">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/lwjgl/lwjgl-opengl/3.1.6/lwjgl-opengl-3.1.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-opengl.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengl-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengl-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opengl-natives-macos.jar!/" />
         </CLASSES>
@@ -564,7 +603,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-zstd:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-zstd:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-zstd.jar!/" />
         </CLASSES>
@@ -573,7 +612,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nuklear:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nuklear:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nuklear.jar!/" />
         </CLASSES>
@@ -582,7 +621,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-ovr-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-ovr-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-ovr-natives-windows.jar!/" />
         </CLASSES>
@@ -591,7 +630,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openvr-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-openvr-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openvr-natives-linux.jar!/" />
         </CLASSES>
@@ -600,7 +639,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyfd:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyfd:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyfd.jar!/" />
         </CLASSES>
@@ -609,7 +648,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lz4-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lz4-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lz4-natives-windows.jar!/" />
         </CLASSES>
@@ -618,7 +657,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyexr:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyexr:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyexr.jar!/" />
         </CLASSES>
@@ -627,7 +666,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-natives-windows.jar!/" />
         </CLASSES>
@@ -636,7 +675,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nfd-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nfd-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nfd-natives-macos.jar!/" />
         </CLASSES>
@@ -645,7 +684,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lz4-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lz4-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lz4-natives-macos.jar!/" />
         </CLASSES>
@@ -654,7 +693,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-jemalloc-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-jemalloc-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-jemalloc-natives-linux.jar!/" />
         </CLASSES>
@@ -663,7 +702,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-bgfx:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-bgfx:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-bgfx.jar!/" />
         </CLASSES>
@@ -672,7 +711,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openal-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-openal-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openal-natives-windows.jar!/" />
         </CLASSES>
@@ -681,16 +720,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-ovr-natives-linux:3.1.6">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/lwjgl-ovr-natives-linux.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lmdb-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lmdb-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lmdb-natives-macos.jar!/" />
         </CLASSES>
@@ -699,7 +729,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-natives-linux.jar!/" />
         </CLASSES>
@@ -708,7 +738,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-glfw-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-glfw-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-glfw-natives-macos.jar!/" />
         </CLASSES>
@@ -717,7 +747,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyexr-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyexr-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyexr-natives-linux.jar!/" />
         </CLASSES>
@@ -726,7 +756,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-par-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-par-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-par-natives-windows.jar!/" />
         </CLASSES>
@@ -735,7 +765,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-assimp-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-assimp-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-assimp-natives-linux.jar!/" />
         </CLASSES>
@@ -744,16 +774,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-ovr-natives-macos:3.1.6">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/libs/lwjgl-ovr-natives-macos.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tootle-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tootle-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tootle-natives-linux.jar!/" />
         </CLASSES>
@@ -762,7 +783,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-par:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-par:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-par.jar!/" />
         </CLASSES>
@@ -771,7 +792,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-glfw-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-glfw-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-glfw-natives-windows.jar!/" />
         </CLASSES>
@@ -780,7 +801,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-sse-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-sse-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-sse-natives-windows.jar!/" />
         </CLASSES>
@@ -789,7 +810,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nanovg-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nanovg-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nanovg-natives-macos.jar!/" />
         </CLASSES>
@@ -798,7 +819,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengles-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengles-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opengles-natives-macos.jar!/" />
         </CLASSES>
@@ -807,7 +828,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lmdb-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lmdb-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lmdb-natives-windows.jar!/" />
         </CLASSES>
@@ -816,7 +837,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lmdb:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lmdb:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lmdb.jar!/" />
         </CLASSES>
@@ -825,7 +846,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-jemalloc-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-jemalloc-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-jemalloc-natives-windows.jar!/" />
         </CLASSES>
@@ -834,7 +855,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-stb-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-stb-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-stb-natives-macos.jar!/" />
         </CLASSES>
@@ -843,7 +864,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-tinyfd-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-tinyfd-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-tinyfd-natives-windows.jar!/" />
         </CLASSES>
@@ -852,7 +873,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-openvr-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-openvr-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-openvr-natives-macos.jar!/" />
         </CLASSES>
@@ -861,16 +882,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-stb:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-stb:3.2.0">
         <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/org/lwjgl/lwjgl-stb/3.1.6/lwjgl-stb-3.1.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-stb.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nfd:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nfd:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nfd.jar!/" />
         </CLASSES>
@@ -879,7 +900,16 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-rpmalloc-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-vma-natives-windows:3.2.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/lwjgl-vma-natives-windows.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: org.lwjgl:lwjgl-rpmalloc-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-rpmalloc-natives-linux.jar!/" />
         </CLASSES>
@@ -888,7 +918,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-rpmalloc:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-rpmalloc:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-rpmalloc.jar!/" />
         </CLASSES>
@@ -897,7 +927,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nfd-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nfd-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nfd-natives-windows.jar!/" />
         </CLASSES>
@@ -906,7 +936,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-nfd-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-nfd-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-nfd-natives-linux.jar!/" />
         </CLASSES>
@@ -915,7 +945,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-yoga-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-yoga-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-yoga-natives-macos.jar!/" />
         </CLASSES>
@@ -924,7 +954,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-remotery:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-remotery:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-remotery.jar!/" />
         </CLASSES>
@@ -933,7 +963,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-bgfx-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-bgfx-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-bgfx-natives-windows.jar!/" />
         </CLASSES>
@@ -942,7 +972,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-xxhash-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-xxhash-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-xxhash-natives-linux.jar!/" />
         </CLASSES>
@@ -951,7 +981,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengles-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengles-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opengles-natives-linux.jar!/" />
         </CLASSES>
@@ -960,7 +990,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-par-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-par-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-par-natives-linux.jar!/" />
         </CLASSES>
@@ -969,7 +999,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengles-natives-windows:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengles-natives-windows:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opengles-natives-windows.jar!/" />
         </CLASSES>
@@ -978,7 +1008,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-bgfx-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-bgfx-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-bgfx-natives-linux.jar!/" />
         </CLASSES>
@@ -987,7 +1017,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-lz4:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-lz4:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-lz4.jar!/" />
         </CLASSES>
@@ -996,7 +1026,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-opengl-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-opengl-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-opengl-natives-linux.jar!/" />
         </CLASSES>
@@ -1005,7 +1035,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-assimp-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-assimp-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-assimp-natives-macos.jar!/" />
         </CLASSES>
@@ -1014,7 +1044,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-natives-macos:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-natives-macos:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-natives-macos.jar!/" />
         </CLASSES>
@@ -1023,7 +1053,7 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: org.lwjgl:lwjgl-yoga-natives-linux:3.1.6">
+      <library name="Maven: org.lwjgl:lwjgl-yoga-natives-linux:3.2.0">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/libs/lwjgl-yoga-natives-linux.jar!/" />
         </CLASSES>

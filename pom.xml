@@ -21,23 +21,27 @@
     </build>
 
     <properties>
-        <lwjgl.version>3.1.6</lwjgl.version>
+        <lwjgl.version>3.2.0</lwjgl.version>
+        <joml.version>1.9.10</joml.version>
     </properties>
 
     <repositories>
         <repository>
             <id>LiquidEngine</id>
-            <url>https://raw.githubusercontent.com/LiquidEngine/repo/releases</url>
+            <url>https://raw.github.com/LiquidEngine/repo/develop</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>imgui</groupId>
-            <artifactId>imgui</artifactId>
-            <version>1.63-beta-0</version>
-            <scope>system</scope>
-            <systemPath>${pom.basedir}/libs/imgui-all.jar</systemPath>
+            <groupId>org.joml</groupId>
+            <artifactId>joml</artifactId>
+            <version>1.9.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.liquidengine</groupId>
+            <artifactId>legui</artifactId>
+            <version>1.4.5-230</version>
         </dependency>
         <dependency>
             <groupId>org.yaml</groupId>
@@ -48,11 +52,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.liquidengine</groupId>
-            <artifactId>legui</artifactId>
-            <version>LATEST</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -122,6 +121,13 @@
             <version>${lwjgl.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/libs/lwjgl-bgfx-natives-macos.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-vma-natives-linux</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/lwjgl-vma-natives-linux.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
@@ -216,6 +222,13 @@
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-vma</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/lwjgl-vma.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl-openvr-natives-windows</artifactId>
             <version>${lwjgl.version}</version>
             <scope>system</scope>
@@ -297,6 +310,13 @@
             <version>${lwjgl.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/libs/lwjgl-xxhash-natives-windows.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-vma-natives-macos</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/lwjgl-vma-natives-macos.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
@@ -426,6 +446,13 @@
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
+            <artifactId>joml-1.9.10</artifactId>
+            <version>${joml.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/joml-1.9.10.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl-sse-natives-macos</artifactId>
             <version>${lwjgl.version}</version>
             <scope>system</scope>
@@ -437,6 +464,13 @@
             <version>${lwjgl.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/libs/lwjgl-nanovg.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-vulkan-natives-macos</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/lwjgl-vulkan-natives-macos.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
@@ -552,13 +586,6 @@
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
-            <artifactId>lwjgl-ovr-natives-linux</artifactId>
-            <version>${lwjgl.version}</version>
-            <scope>system</scope>
-            <systemPath>${pom.basedir}/libs/lwjgl-ovr-natives-linux.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.lwjgl</groupId>
             <artifactId>lwjgl-lmdb-natives-macos</artifactId>
             <version>${lwjgl.version}</version>
             <scope>system</scope>
@@ -598,13 +625,6 @@
             <version>${lwjgl.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/libs/lwjgl-assimp-natives-linux.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.lwjgl</groupId>
-            <artifactId>lwjgl-ovr-natives-macos</artifactId>
-            <version>${lwjgl.version}</version>
-            <scope>system</scope>
-            <systemPath>${pom.basedir}/libs/lwjgl-ovr-natives-macos.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
@@ -703,6 +723,13 @@
             <version>${lwjgl.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/libs/lwjgl-nfd.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-vma-natives-windows</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/libs/lwjgl-vma-natives-windows.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>

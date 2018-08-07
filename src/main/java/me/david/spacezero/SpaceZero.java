@@ -5,8 +5,10 @@ import me.david.spacezero.filesystem.format.Project;
 import me.david.spacezero.filesystem.format.ProjectIO;
 import me.david.spacezero.gui.MainGUI;
 import me.david.spacezero.logger.ZeroLogger;
+import org.lwjgl.Version;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.logging.Level;
 
 public class SpaceZero {
@@ -24,8 +26,15 @@ public class SpaceZero {
     private SpaceZero() {
         instance = this;
         logger.printBanner();
+        logger.info("LWJGL Version: " + Version.getVersion());
+        System.out.println("a");
+        try {
+            project = ProjectIO.load(new File("example.sz"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         gui = new MainGUI();
-        project = ProjectIO.create(new File("example.sz"), "Example Projects");
     }
 
 }
