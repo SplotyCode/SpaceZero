@@ -30,6 +30,14 @@
             <id>LiquidEngine</id>
             <url>https://raw.github.com/LiquidEngine/repo/develop</url>
         </repository>
+        <repository>
+            <id>LiquidEngine Release</id>
+            <url>https://raw.github.com/LiquidEngine/repo/releases</url>
+        </repository>
+        <repository>
+            <id>Sona</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
     </repositories>
 
     <dependencies>
